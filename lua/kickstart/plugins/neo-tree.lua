@@ -22,4 +22,16 @@ return {
       },
     },
   },
+  config = function(_, opts)
+    require('neo-tree').setup(opts)
+
+    -- Open Neotree on startup when no file is specified
+    vim.api.nvim_create_autocmd('VimEnter', {
+      callback = function()
+        if vim.fn.argc() == 0 then
+          vim.cmd 'Neotree toggle'
+        end
+      end,
+    })
+  end,
 }
