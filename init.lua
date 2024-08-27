@@ -156,14 +156,8 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
-vim.opt.shell = 'powershell'
-vim.opt.shellcmdflag =
-  '-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.Encoding]::UTF8;'
-vim.opt.shellredir = '2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode'
-vim.opt.shellpipe = '2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode'
-vim.opt.shellquote = ''
-vim.opt.shellxquote = ''
 -- [[ Basic Keymaps ]]
+
 --  See `:help vim.keymap.set()`
 
 -- Clear highlights on search when pressing <Esc> in normal mode
